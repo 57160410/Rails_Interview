@@ -1,23 +1,23 @@
 require 'test_helper'
 
-class StaticPagesControllerTest < ActionController::TestCase
+class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   test "should get home" do
-    get :home
+    get static_pages_home_url
     assert_response :success
   end
 
   test "should get kingsong1" do
-    get :kingsong1
+    get static_pages_kingsong1_url
     assert_response :success
   end
 
   test "should get kingsong2" do
-    get :kingsong2
+    get static_pages_kingsong2_url
     assert_response :success
   end
 
   test "should get kingsong3" do
-    get :kingsong3
+    get static_pages_kingsong3_url
     assert_response :success
   end
 
